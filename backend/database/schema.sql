@@ -1,11 +1,11 @@
--- ✅ เลือก Database ที่ต้องการใช้งาน
+-- เลือก Database ที่ต้องการใช้งาน
 CREATE DATABASE IF NOT EXISTS insurancedb;
 USE insurancedb;
 
--- ✅ แสดงรายการตาราง (สามารถใช้เพื่อตรวจสอบหลังจากสร้างตาราง)
+-- แสดงรายการตาราง (สามารถใช้เพื่อตรวจสอบหลังจากสร้างตาราง)
 SHOW TABLES;
 
--- ✅ สร้างตาราง `insurance_forms`
+--  สร้างตาราง `insurance_forms`
 CREATE TABLE IF NOT EXISTS insurance_forms (
   id INT AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(100) NOT NULL,
@@ -26,5 +26,5 @@ CREATE TABLE IF NOT EXISTS insurance_forms (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ✅ ตรวจสอบข้อมูลในตาราง (หลังจากเพิ่มข้อมูลแล้ว)
+-- ตรวจสอบข้อมูลในตาราง (หลังจากเพิ่มข้อมูลแล้ว)
 SELECT * FROM insurance_forms;
