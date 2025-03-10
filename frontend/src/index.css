@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ นำเข้า Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Prompt:wght@300;400;600&family=Sarabun:wght@300;400;600&display=swap");
+
+/* ✅ ตั้งค่าฟอนต์หลักของโปรเจค */
+body {
+  @apply font-thai bg-gray-50 text-gray-900;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
