@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import InsuranceForm from "./components/InsuranceForm"; // ✅ ตรวจสอบ path ให้ถูกต้อง
-import FillInfo from "./components/FillInfo"; // ✅ Import ไฟล์ FillInfo
+import InsuranceForm from "./components/InsuranceForm"; //  ตรวจสอบ path ให้ถูกต้อง
+import FillInfo from "./components/FillInfo"; //  Import ไฟล์ FillInfo
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
         {/* <h1 className="text-xl font-bold text-center">FWD Insurance</h1> */}
         
         <Routes>
-          <Route path="/" element={<InsuranceForm />} /> {/* ✅ เปิดหน้าแรกเป็น InsuranceForm */}
-          <Route path="/fill-info" element={<FillInfo />} /> {/* ✅ ไปที่หน้ากรอกข้อมูล */}
+          <Route path="/" element={<InsuranceForm />} /> {/*  เปิดหน้าแรกเป็น InsuranceForm */}
+          <Route path="/fill-info" element={<FillInfo />} /> {/*  ไปที่หน้ากรอกข้อมูล */}
         </Routes>
       </div>
     </Router>

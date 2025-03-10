@@ -7,7 +7,7 @@ export const store = configureStore({
   },
 });
 
-// ✅ กำหนด Type ของ State และ Dispatch
+//  กำหนด Type ของ State และ Dispatch
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 

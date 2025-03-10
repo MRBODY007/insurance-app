@@ -4,7 +4,7 @@ const axiosInstance = axios.create({
   baseURL: "http://localhost:5001/api",
 });
 
-// ✅ ดึงแผนประกันจาก API
+//  ดึงแผนประกันจาก API
 
 export const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
   const response = await axiosInstance.get("/getProducts");
@@ -19,14 +19,14 @@ export const calculatePremium = createAsyncThunk(
   }
 );
 
-// ✅ กำหนดประเภทของแผนประกัน
+//  กำหนดประเภทของแผนประกัน
 export interface Product {
   planCode: string;
   packageName: string;
   benefit: string;
 }
 
-// ✅ กำหนดประเภทของ `initialState`
+//  กำหนดประเภทของ `initialState`
 interface PremiumState {
   products: Product[];
   data: any;
@@ -47,20 +47,20 @@ const premiumSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // ✅ โหลดแผนประกัน
+      //  โหลดแผนประกัน
       .addCase(fetchProducts.pending, (state) => {
         state.status = "loading";
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.products = action.payload; // ✅ เก็บข้อมูลแผนประกัน
+        state.products = action.payload; //  เก็บข้อมูลแผนประกัน
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message || "Error fetching products";
       })
 
-      // ✅ คำนวณเบี้ยประกัน
+      //  คำนวณเบี้ยประกัน
       .addCase(calculatePremium.pending, (state) => {
         state.status = "loading";
       })

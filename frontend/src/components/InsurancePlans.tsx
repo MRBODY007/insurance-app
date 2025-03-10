@@ -1,15 +1,15 @@
 import React from "react";
-import { useLocation } from "react-router-dom"; // ✅ ใช้ useLocation() เพื่อรับ state
+import { useLocation } from "react-router-dom"; //  ใช้ useLocation() เพื่อรับ state
 
 const FillInfo: React.FC = () => {
   const location = useLocation();
-  const selectedPlan = location.state?.selectedPlan; // ✅ รับข้อมูลแผนที่ถูกเลือก
+  const selectedPlan = location.state?.selectedPlan; //  รับข้อมูลแผนที่ถูกเลือก
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">กรอกข้อมูลของคุณ</h2>
 
-      {/* ✅ แสดงข้อมูลแผนที่ถูกเลือก */}
+      {/*  แสดงข้อมูลแผนที่ถูกเลือก */}
       {selectedPlan ? (
         <div className="bg-gray-100 p-4 rounded-lg mb-6">
           <h3 className="text-lg font-bold text-gray-700">แผนที่เลือก: {selectedPlan.packageName}</h3>
@@ -20,7 +20,7 @@ const FillInfo: React.FC = () => {
         <p className="text-center text-gray-500">ไม่มีข้อมูลแผนที่เลือก</p>
       )}
 
-      {/* ✅ ฟอร์มกรอกข้อมูล */}
+      {/*  ฟอร์มกรอกข้อมูล */}
       <form>
         <label className="block text-gray-700">ชื่อ-นามสกุล</label>
         <input type="text" className="w-full p-3 border rounded-lg mb-4" required />

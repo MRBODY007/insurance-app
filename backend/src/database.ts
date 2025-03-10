@@ -9,14 +9,14 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD || '1234567890',
   database: process.env.DB_NAME || 'insuranceDB',
   port: Number(process.env.DB_PORT) || 3306,
-  charset: 'utf8mb4' // ✅ เพิ่ม charset ให้รองรับภาษาไทย
+  charset: 'utf8mb4' //  เพิ่ม charset ให้รองรับภาษาไทย
 });
 
 pool.getConnection()
-  .then(() => console.log('✅ MySQL Connected'))
+  .then(() => console.log(' MySQL Connected database'))
   .catch(err => {
-    console.error('❌ MySQL Connection Error:', err.message);
-    console.error('🔍 ตรวจสอบว่าคุณเปิด MySQL หรือยัง และข้อมูล .env ถูกต้อง');
+    console.error('MySQL Connection Error:', err.message);
+    console.error('ตรวจสอบว่าคุณเปิด MySQL หรือยัง และข้อมูล .env ถูกต้อง');
   });
 
 export default pool;

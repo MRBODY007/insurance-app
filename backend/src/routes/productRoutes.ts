@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get("/getProducts", getProducts);
 router.post("/premium-calculation", calculatePremium);
-router.post("/save-insurance", saveInsurance); // ✅ เพิ่ม Route นี้
+router.post("/save-insurance", saveInsurance); 
 
 export default router;

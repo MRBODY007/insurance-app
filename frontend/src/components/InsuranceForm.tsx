@@ -15,14 +15,14 @@ import { RootState } from "../redux/store";
 import { Product } from "../redux/premiumSlice";
 import { getPaymentFrequencyLabel } from "../utils/helpers";
 import { useNavigate } from "react-router-dom";
-import Banner from "../assets/Banner.jpg"; // ✅ นำเข้าภาพ
+import Banner from "../assets/Banner.jpg"; //  นำเข้าภาพ
 
 const InsurancePlans: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [premiumResults, setPremiumResults] = useState<{ [key: string]: any }>(
     {}
   );
-  const navigate = useNavigate(); // ✅ ใช้ navigate() เพื่อไปยังหน้าใหม่
+  const navigate = useNavigate(); //  ใช้ navigate() เพื่อไปยังหน้าใหม่
   const dispatch = useAppDispatch();
   const products = useAppSelector((state: RootState) => state.premium.products);
   const status = useAppSelector((state: RootState) => state.premium.status);
@@ -117,13 +117,13 @@ const InsurancePlans: React.FC = () => {
             key={product.planCode}
             className="bg-white shadow-lg rounded-2xl p-6 border-t-4 border-orange-500 transition-all hover:scale-105 hover:shadow-xl h-full flex flex-col  "
           >
-            {/* ✅ หัวข้อแผนประกัน พร้อมไอคอน */}
+            {/*  หัวข้อแผนประกัน พร้อมไอคอน */}
             <h3 className="text-xl font-semibold text-orange-500 text-center flex items-center justify-center gap-2 mb-7">
               <ShieldCheck className="text-[#354942]" size={28} />
               {product.packageName}
             </h3>
 
-            {/* ✅ ความคุ้มครอง */}
+            {/*  ความคุ้มครอง */}
             <p className="text-center text-gray-500 mt-2 font-thai ">
               ความคุ้มครองสูงสุด
             </p>
@@ -187,7 +187,7 @@ const InsurancePlans: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* ✅ ปุ่มเลือกแผน พร้อมไอคอน */}
+                  {/*  ปุ่มเลือกแผน พร้อมไอคอน */}
                   <button
                     className="w-full mt-4 py-2 bg-[#354942] text-white font-semibold rounded-lg hover:bg-green-700 transition-all flex items-center justify-center gap-2"
                     onClick={() => handleSelectPlan(product)}

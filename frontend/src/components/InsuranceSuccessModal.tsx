@@ -8,7 +8,7 @@ interface InsuranceSuccessModalProps {
   navigate: (path: string) => void;
 }
 
-// ✅ ตั้งค่าให้ Modal ใช้งานใน root ของแอป
+//  ตั้งค่าให้ Modal ใช้งานใน root ของแอป
 Modal.setAppElement("#root");
 
 const InsuranceSuccessModal: React.FC<InsuranceSuccessModalProps> = ({
@@ -34,7 +34,7 @@ const InsuranceSuccessModal: React.FC<InsuranceSuccessModalProps> = ({
         <X className="w-6 h-6" />
       </button>
 
-      {/* ✅ ไอคอนแสดงความสำเร็จ */}
+      {/*  ไอคอนแสดงความสำเร็จ */}
       <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
 
       <h2 id="success-modal-title" className="text-xl font-semibold text-gray-700">
@@ -46,7 +46,7 @@ const InsuranceSuccessModal: React.FC<InsuranceSuccessModalProps> = ({
         กรุณารอการติดต่อจากทีมงาน
       </p>
 
-      {/* ✅ ข้อมูลการติดต่อ */}
+      {/*  ข้อมูลการติดต่อ */}
       <div className="mt-4 space-y-3">
         <div className="flex items-center justify-center space-x-2 text-gray-700">
           <Phone className="w-5 h-5 text-blue-500" />
@@ -58,11 +58,11 @@ const InsuranceSuccessModal: React.FC<InsuranceSuccessModalProps> = ({
         </div>
       </div>
 
-      {/* ✅ ปุ่มปิด Modal และกลับหน้าแรก */}
+      {/*  ปุ่มปิด Modal และกลับหน้าแรก */}
       <button
         onClick={() => {
           onClose();
-          navigate("/"); // ✅ ปิด Modal และกลับไปหน้าแรก
+          navigate("/"); //  ปิด Modal และกลับไปหน้าแรก
         }}
         className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
       >

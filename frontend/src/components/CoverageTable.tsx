@@ -39,11 +39,11 @@ const mockData = [
 ];
 
 const CoverageTable: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false); // ✅ ค่าเริ่มต้นเป็นปิด
+  const [isOpen, setIsOpen] = useState(false); //  ค่าเริ่มต้นเป็นปิด
 
   return (
     <div className="mx-auto mt-4  shadow-lg rounded-xl ">
-      {/* ✅ ปุ่ม Toggle */}
+      {/*  ปุ่ม Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between bg-orange-500 text-white text-lg font-semibold px-6 py-4 rounded-xl hover:bg-orange-600 transition "
@@ -52,7 +52,7 @@ const CoverageTable: React.FC = () => {
         {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
       </button>
 
-      {/* ✅ เพิ่ม `overflow-x-auto` เพื่อให้ Scroll ได้ */}
+      {/*  เพิ่ม `overflow-x-auto` เพื่อให้ Scroll ได้ */}
       {isOpen && (
         <div className="overflow-x-auto">
           <table className="w-full min-w-max border-collapse  ">
@@ -75,7 +75,7 @@ const CoverageTable: React.FC = () => {
             <tbody>
               {mockData.map((category, catIndex) => (
                 <React.Fragment key={catIndex}>
-                  {/* ✅ เพิ่ม `whitespace-nowrap` ป้องกันข้อความซ้อนกัน */}
+                  {/*  เพิ่ม `whitespace-nowrap` ป้องกันข้อความซ้อนกัน */}
                   <tr className="bg-gray-100 text-gray-800 ">
                     <td
                       className="p-3 font-bold text-lg text-left "

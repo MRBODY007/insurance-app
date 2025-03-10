@@ -1,6 +1,6 @@
 
 import { render, screen } from '@testing-library/react';
-import App from './App'; // ✅ ตรวจสอบ path ของ App component
+import App from './App'; //  ตรวจสอบ path ของ App component
 
 // Mocking InsuranceForm component
 jest.mock('../../components/InsuranceForm', () => () => (
