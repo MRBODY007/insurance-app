@@ -13,7 +13,6 @@ insurance-app/
 │── frontend/        # โค้ดฝั่ง Client (React.js)
 │   ├── src/         # ไฟล์หลักของ React
 │   ├── components/  # UI Components
-│   ├── pages/       # หน้าเว็บแต่ละหน้า
 │   ├── .env         # ค่าคอนฟิก frontend (หากมี)
 │   └── App.js       # Entry point ของ frontend
 │
